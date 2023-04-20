@@ -1,0 +1,28 @@
+@tailwind utilities;
+
+@layer utilities {
+  .sidebar-show {
+    animation: sidebar-show-animation 0.3s ease-out;
+  }
+  .sidebar-hide {
+    animation: sidebar-hide-animation 0.3s ease-out;
+  }
+}
+
+@keyframes sidebar-show-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sidebar-hide-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
