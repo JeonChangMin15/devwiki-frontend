@@ -1,11 +1,16 @@
 import "@/common/styles/globals.css";
-import Layout from "@/common/layout/Layout";
+import "@/common/styles/sidebar.css";
 import type { AppProps } from "next/app";
+
+import Layout from "@/common/layout/Layout";
+import { ColorModeProvider } from "@/common/context/ColorModeProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ColorModeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ColorModeProvider>
   );
 }

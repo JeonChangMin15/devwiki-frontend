@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { useColorMode } from "../hooks/useColorMode";
+import { useColorModeContext } from "../context/ColorModeProvider";
 
-export const NavBar = () => {
-  const [colorMode, setColorMode] = useColorMode();
+interface NavBarProps {
+  setIsSidebarOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export const NavBar = ({ setIsSidebarOpen }: NavBarProps) => {
+  const { colorMode, setColorMode } = useColorModeContext();
 
   return (
     <nav className="fixed top-0 left-0 right-0 py-5 px-5 dark:bg-black bg-white shadow-xl shadow-gray-100">
@@ -14,6 +18,7 @@ export const NavBar = () => {
           <GiHamburgerMenu
             size={30}
             color={colorMode === "dark" ? "white" : "black"}
+            onClick={() => setIsSidebarOpen((prev) => !prev)}
           />
         </div>
         <Image src={"/images/logo.png"} alt="logo" width={120} height={50} />
