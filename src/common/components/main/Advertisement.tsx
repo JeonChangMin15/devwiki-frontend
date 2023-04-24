@@ -4,7 +4,6 @@ import Slider from "react-slick";
 
 export const Advertisement = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
