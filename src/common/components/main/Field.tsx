@@ -18,7 +18,10 @@ export const Field = ({ lecture, mainField }: FieldProps) => {
       <div className="w-full flex pt-3 space-x-10 lg:justify-between">
         {lecture?.map((info, index) => {
           return (
-            <div key={index} className="hover:cursor-pointer hover:shadow">
+            <div
+              key={index}
+              className="hover:cursor-pointer lg:hover:shadow active:shadow-lg dark:hover:shadow-gray-500"
+            >
               <div className="flex items-center space-x-3 pb-1 lg:space-x-6">
                 <GiTrophyCup color={colors[index]} size={35} />
                 <span>Top{index + 1}</span>
