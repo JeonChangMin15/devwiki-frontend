@@ -17,3 +17,33 @@ export const GET_TOP_THREE_LECTURES = gql`
     }
   }
 `;
+
+export const GET_LECTURE_INFO = gql`
+  query fetchLecture($lectureId: String!) {
+    fetchLecture(lectureId: $lectureId) {
+      id
+      title
+      writer
+      price
+      averageRating
+      duration
+      url
+      description
+      comments {
+        id
+        writer
+        description
+        rating
+      }
+      tags {
+        name
+      }
+      subCategory {
+        name
+        mainCategory {
+          name
+        }
+      }
+    }
+  }
+`;

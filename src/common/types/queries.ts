@@ -11,8 +11,27 @@ export interface LectureData {
       name: MainCategory;
     };
   };
+  price: number;
+  duration: number;
+  url: string | null;
+  comments: {
+    id: string;
+    writer: string;
+    description: string;
+    rating: number;
+  }[];
+  tags: { name: string }[];
 }
 
+export type TopThreeLecture = Omit<
+  LectureData,
+  "price" | "duration" | "url" | "comments" | "tags"
+>;
+
 export interface TopThreeLecturesType {
-  fetchTopThreeLectures: LectureData[];
+  fetchTopThreeLectures: TopThreeLecture[];
+}
+
+export interface DetailLecture {
+  fetchLecture: LectureData[];
 }

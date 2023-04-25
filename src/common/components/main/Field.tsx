@@ -1,15 +1,17 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { GiTrophyCup } from "react-icons/gi";
 import { AiFillStar } from "react-icons/ai";
 
-import { LectureData } from "@/common/types/queries";
+import { TopThreeLecture } from "@/common/types/queries";
 
 interface FieldProps {
-  lecture: LectureData[];
+  lecture: TopThreeLecture[];
   mainField: string;
 }
 
 export const Field = ({ lecture, mainField }: FieldProps) => {
+  const router = useRouter();
   const colors = ["orange", "silver", "brown"];
 
   return (
@@ -21,6 +23,14 @@ export const Field = ({ lecture, mainField }: FieldProps) => {
             <div
               key={index}
               className="hover:cursor-pointer lg:hover:shadow active:shadow-lg dark:hover:shadow-gray-500"
+              onClick={() =>
+                router.push({
+                  pathname: "/detail",
+                  query: {
+                    lectureId: info.id,
+                  },
+                })
+              }
             >
               <div className="flex items-center space-x-3 pb-1 lg:space-x-6">
                 <GiTrophyCup color={colors[index]} size={35} />
