@@ -18,7 +18,7 @@ export const TopThreeLectures = () => {
   const computerScienceLectures = filteringLecture(data, "cs");
 
   return (
-    <div className="pt-3 space-y-3">
+    <div className="pt-3 pb-2 space-y-3">
       <Field lecture={frontendLectures ?? []} mainField="Frontend" />
       <Field lecture={backendLectures ?? []} mainField="Backend" />
       <Field
