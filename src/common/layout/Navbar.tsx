@@ -1,5 +1,7 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { useColorModeContext } from "../context/ColorModeProvider";
@@ -10,6 +12,7 @@ interface NavBarProps {
 
 export const NavBar = ({ setIsSidebarOpen }: NavBarProps) => {
   const { colorMode, setColorMode } = useColorModeContext();
+  const router = useRouter();
 
   return (
     <nav className="fixed top-0 left-0 right-0 py-5 px-5 dark:bg-black dark:shadow-gray-700 bg-white shadow-xl shadow-gray-100 lg:px-80">
@@ -21,7 +24,16 @@ export const NavBar = ({ setIsSidebarOpen }: NavBarProps) => {
             onClick={() => setIsSidebarOpen((prev) => !prev)}
           />
         </div>
-        <Image src={"/images/logo.png"} alt="logo" width={120} height={50} />
+        <div className="hover: cursor-pointer">
+          <Image
+            src={"/images/logo.png"}
+            alt="logo"
+            width={120}
+            height={50}
+            onClick={() => router.push("/")}
+          />
+        </div>
+
         <div
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           className="w-6 h-6"
