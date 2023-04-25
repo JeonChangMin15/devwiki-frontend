@@ -1,4 +1,4 @@
-type MainCategory = "frontend" | "backend" | "cs";
+export type MainCategory = "frontend" | "backend" | "cs";
 
 export interface LectureData {
   id: string;
