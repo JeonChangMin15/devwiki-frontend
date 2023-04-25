@@ -26,7 +26,7 @@ export const Field = ({ lecture, mainField }: FieldProps) => {
                 <GiTrophyCup color={colors[index]} size={35} />
                 <span>Top{index + 1}</span>
               </div>
-              <div className="flex w-24 lg:w-60 lg:h-32  h-16 bg-green-500 text-white font-semibold justify-center items-center">
+              <div className="flex w-24 lg:w-60 lg:h-32 h-16 bg-green-500 text-white lg:text-2xl font-semibold justify-center items-center">
                 {info.subCategory.name}
               </div>
               <div className="flex flex-col space-y-1">
