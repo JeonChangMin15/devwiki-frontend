@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
         />
       )}
       <NavBar setIsSidebarOpen={setIsSidebarOpen} />
-      <main className="pt-24 px-5 lg:px-40">{children}</main>
+      <main className="pt-24 px-5 lg:px-80">{children}</main>
       <BottomNav setIsSidebarOpen={setIsSidebarOpen} />
     </div>
   );

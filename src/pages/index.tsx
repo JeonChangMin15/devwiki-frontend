@@ -6,7 +6,7 @@ import { Advertisement } from "@/common/components/main/Advertisement";
 const Home = () => {
   return (
     <div>
-      <Advertisement />
+      {/* <Advertisement /> */}
       <TopThreeLectures />
     </div>
   );

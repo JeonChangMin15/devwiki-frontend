@@ -12,7 +12,7 @@ export const NavBar = ({ setIsSidebarOpen }: NavBarProps) => {
   const { colorMode, setColorMode } = useColorModeContext();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 py-5 px-5 dark:bg-black bg-white shadow-xl shadow-gray-100 lg:px-40">
+    <nav className="fixed top-0 left-0 right-0 py-5 px-5 dark:bg-black bg-white shadow-xl shadow-gray-100 lg:px-80">
       <div className="flex items-center justify-between">
         <div className="w-6 h-6">
           <GiHamburgerMenu
