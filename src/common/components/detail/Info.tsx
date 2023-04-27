@@ -1,9 +1,10 @@
-import { LectureData } from "@/common/types/queries";
-import { data } from "autoprefixer";
 import Link from "next/link";
-import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
+import { AiFillStar } from "react-icons/ai";
+
+import { LectureData } from "@/common/types/queries";
+
+import React from "react";
 
 interface InfoProps {
   info: LectureData;
@@ -14,7 +15,7 @@ export const Info = ({ info }: InfoProps) => {
 
   return (
     <>
-      <div className="flex flex-col bg-zinc-700 text-white pt-2 px-2 pb-4">
+      <div className="flex flex-col bg-gray-800 text-white pt-2 px-2 pb-4">
         {info.url ? (
           <Link
             className="text-2xl font-semibold pb-2"

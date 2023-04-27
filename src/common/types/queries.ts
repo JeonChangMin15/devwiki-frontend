@@ -1,6 +1,6 @@
 export type MainCategory = "frontend" | "backend" | "cs";
 
-interface CommentInfo {
+export interface Comments {
   id: string;
   writer: string;
   description: string;
@@ -21,7 +21,7 @@ export interface LectureData {
   price: number;
   duration: number;
   url: string | null;
-  comments: CommentInfo[];
+  comments: Comments[];
   tags: { name: string }[];
   description: string;
 }

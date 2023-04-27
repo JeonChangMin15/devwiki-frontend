@@ -5,6 +5,7 @@ import { useQuery } from "@apollo/client";
 import { GET_LECTURE_INFO } from "@/common/graphql/queries";
 import { DetailLecture } from "@/common/types/queries";
 import { Info } from "@/common/components/detail/Info";
+import { Comment } from "@/common/components/detail/Comment";
 
 const DetailPage = () => {
   const RATING = [0, 1, 2, 3, 4];
@@ -25,6 +26,10 @@ const DetailPage = () => {
   return (
     <div className="pt-5">
       <Info info={data.fetchLecture ?? []} />
+      <Comment
+        comments={data.fetchLecture.comments ?? []}
+        averageRating={data.fetchLecture.averageRating}
+      />
     </div>
   );
 };
