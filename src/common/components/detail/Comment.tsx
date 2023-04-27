@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
 import { Comments } from "@/common/types/queries";
-import { writer } from "repl";
 
 interface Commentprops {
   comments: Comments[];
@@ -13,7 +12,7 @@ export const Comment = ({ comments, averageRating }: Commentprops) => {
   const RATING = [0, 1.5, 2.5, 3.5, 4.5];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-4">
       <div className="flex items-center space-x-2">
         <span className="text-2xl font-semibold">수강평</span>
         <span className="text-base text-gray-400">총 {comments.length}개</span>
