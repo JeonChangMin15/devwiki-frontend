@@ -23,11 +23,12 @@ export interface LectureData {
   url: string | null;
   comments: CommentInfo[];
   tags: { name: string }[];
+  description: string;
 }
 
 export type TopThreeLecture = Omit<
   LectureData,
-  "price" | "duration" | "url" | "comments" | "tags"
+  "price" | "duration" | "url" | "comments" | "tags" | "description"
 >;
 
 export interface TopThreeLecturesType {
@@ -35,5 +36,5 @@ export interface TopThreeLecturesType {
 }
 
 export interface DetailLecture {
-  fetchLecture: LectureData[];
+  fetchLecture: LectureData;
 }

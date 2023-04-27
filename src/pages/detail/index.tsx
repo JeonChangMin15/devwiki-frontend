@@ -4,8 +4,10 @@ import { useQuery } from "@apollo/client";
 
 import { GET_LECTURE_INFO } from "@/common/graphql/queries";
 import { DetailLecture } from "@/common/types/queries";
+import { Info } from "@/common/components/detail/Info";
 
 const DetailPage = () => {
+  const RATING = [0, 1, 2, 3, 4];
   const router = useRouter();
   const { lectureId } = router.query;
   console.log("lectureId", lectureId);
@@ -18,7 +20,13 @@ const DetailPage = () => {
 
   console.log("lecturedata: ", data);
 
-  return <div>index</div>;
+  if (!data) return;
+
+  return (
+    <div className="pt-5">
+      <Info info={data.fetchLecture ?? []} />
+    </div>
+  );
 };
 
 export default DetailPage;
