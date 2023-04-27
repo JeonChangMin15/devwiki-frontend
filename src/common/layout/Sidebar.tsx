@@ -26,11 +26,13 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
     <>
       <div
         onClick={() => setIsSidebarOpen((prev) => !prev)}
-        className="absolute top-0 left-0 z-[5] w-full h-full bg-slate-700 opacity-50"
+        className={`absolute top-0 left-0 z-[5] w-full h-full bg-slate-700 opacity-50 ${
+          isSidebarOpen ? "block" : "hidden"
+        }`}
       ></div>
       <div
-        className={`absolute top-0 left-0 z-10 w-72 bg-white shadow-lg transition-all duration-500 ${
-          isSidebarOpen ? "sidebar-show" : "sidebar-hide"
+        className={`absolute top-0 left-0 z-10 w-72 bg-white shadow-lg duration-300 ${
+          isSidebarOpen ? "sidebar-show block" : "sidebar-hide invisible"
         }`}
       >
         <div className="relative px-5 py-2 border-b border-slate-200">

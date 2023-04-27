@@ -13,12 +13,11 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="relative">
-      {isSidebarOpen && (
-        <Sidebar
-          isSidebarOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
-        />
-      )}
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
+
       <NavBar setIsSidebarOpen={setIsSidebarOpen} />
       <main className="pt-24 px-5 lg:px-80 dark:bg-black dark:text-white">
         {children}
