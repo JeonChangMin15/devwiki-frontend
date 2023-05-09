@@ -20,12 +20,10 @@ const DetailPage = () => {
     },
   });
 
-  console.log("lecturedata: ", data);
-
   if (!data) return;
 
   return (
-    <div className="pt-5">
+    <div className="pt-5 py-5">
       <Info info={data.fetchLecture ?? []} />
       <Comment
         comments={data.fetchLecture.comments ?? []}
