@@ -6,6 +6,7 @@ import { GET_LECTURE_INFO } from "@/common/graphql/queries";
 import { DetailLecture } from "@/common/types/queries";
 import { Info } from "@/common/components/detail/Info";
 import { Comment } from "@/common/components/detail/Comment";
+import { Input } from "@/common/components/detail/Input";
 
 const DetailPage = () => {
   const RATING = [0, 1, 2, 3, 4];
@@ -30,6 +31,7 @@ const DetailPage = () => {
         comments={data.fetchLecture.comments ?? []}
         averageRating={data.fetchLecture.averageRating}
       />
+      <Input lectureId={lectureId} />
     </div>
   );
 };
