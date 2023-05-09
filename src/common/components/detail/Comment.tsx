@@ -36,11 +36,11 @@ export const Comment = ({ comments, averageRating }: Commentprops) => {
       <div className="pt-5 space-y-2 divide-y">
         {comments.map(({ writer, rating, description, id }, index) => {
           return (
-            <div className="flex flex-col space-y-1" key={index}>
+            <div className="flex flex-col space-y-1" key={id + description}>
               <div className="flex items-center space-x-1">
-                {RATING.map((value) => (
+                {RATING.map((value, i) => (
                   <AiFillStar
-                    key={rating}
+                    key={i + id}
                     fill={rating >= value ? "orange" : "gray"}
                     size={15}
                   />

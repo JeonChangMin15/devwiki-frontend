@@ -66,10 +66,10 @@ export const Input = ({ lectureId }: InputProps) => {
           {...register("password", { required: true, minLength: 1 })}
         />
       </div>
-      <div className="flex space-x-1 items-center pt-3 px-8">
-        {RATING.map((score) => (
+      <div className="flex space-x-1 items-center pt-3 px-8 lg:px-32 lg:cursor-pointer">
+        {RATING.map((score, index) => (
           <AiFillStar
-            key={score}
+            key={index}
             onClick={() => setRating(score)}
             fill={rating >= score ? "orange" : "gray"}
           />
