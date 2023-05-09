@@ -9,10 +9,8 @@ import { Comment } from "@/common/components/detail/Comment";
 import { Input } from "@/common/components/detail/Input";
 
 const DetailPage = () => {
-  const RATING = [0, 1, 2, 3, 4];
   const router = useRouter();
   const { lectureId } = router.query;
-  console.log("lectureId", lectureId);
 
   const { data, error, loading } = useQuery<DetailLecture>(GET_LECTURE_INFO, {
     variables: {

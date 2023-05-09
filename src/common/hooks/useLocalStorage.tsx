@@ -11,7 +11,7 @@ export const useLocalStorage = <T,>(
       const storedValue = localStorage.getItem(key);
       return storedValue ? JSON.parse(storedValue) : initialValue;
     } catch (error) {
-      console.error(`Error getting item from localStorage: ${error}`);
+      // console.error(`Error getting item from localStorage: ${error}`);
       return initialValue;
     }
   });
@@ -24,7 +24,7 @@ export const useLocalStorage = <T,>(
         localStorage.setItem(key, JSON.stringify(state));
       }
     } catch (error) {
-      console.error(`Error setting item in localStorage: ${error}`);
+      // console.error(`Error setting item in localStorage: ${error}`);
     }
   }, [key, state]);
 
