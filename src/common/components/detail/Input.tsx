@@ -68,16 +68,16 @@ export const Input = ({ lectureId }: InputProps) => {
     >
       <div className="flex justify-center items-center space-x-1">
         <input
-          className={`w-2/5 border-solid border-gray-400 border-2 outline-none ${
-            errors.writer && "border-emerald-400"
+          className={`w-2/5 border-solid border-2 outline-none ${
+            errors.writer ? "border-emerald-400" : "border-gray-400"
           }`}
           type="text"
           placeholder="아이디"
           {...register("writer", { required: true, minLength: 1 })}
         />
         <input
-          className={`w-2/5 border-solid border-gray-400 border-2 outline-none ${
-            errors.password && "border-emerald-400"
+          className={`w-2/5 border-solid border-2 outline-none ${
+            errors.password ? "border-emerald-400" : "border-gray-400"
           }`}
           type="password"
           placeholder="비밀번호"
@@ -98,8 +98,8 @@ export const Input = ({ lectureId }: InputProps) => {
       </div>
       <div className="flex justify-center items-center py-3 space-x-2">
         <textarea
-          className={`w-4/5 h-20 border-solid border-gray-400 border-2 outline-none ${
-            errors.description && "border-emerald-400"
+          className={`w-4/5 h-20 border-solid border-2 outline-none ${
+            errors.description ? "border-emerald-400" : "border-gray-400"
           }`}
           {...register("description", { required: true, minLength: 1 })}
         />
