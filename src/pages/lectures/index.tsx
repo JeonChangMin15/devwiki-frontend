@@ -17,13 +17,23 @@ const Lecture = () => {
     },
   });
 
-  console.log("data:", data);
   return (
-    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 pb-5 lg:pb-20">
+    <div className="grid grid-cols-2 gap-x-4 lg:grid-cols-4 pb-5 lg:pb-20 min-h-[550px] lg:min-h-[700px]">
       {data?.fetchLectures.map(
         ({ id, writer, price, title, averageRating }, index) => {
           return (
-            <div className="h-40 mb-2 lg:mb-20" key={id}>
+            <div
+              className="mb-6 lg:mb-20 shadow-sm lg:shadow-none lg:hover:shadow hover:cursor-pointer max-h-[200px] lg:max-h-[250px]"
+              onClick={() => {
+                router.push({
+                  pathname: "/detail",
+                  query: {
+                    lectureId: id,
+                  },
+                });
+              }}
+              key={id}
+            >
               <div className="w-full h-16 lg:h-32 bg-emerald-300 text-white">
                 hello
               </div>

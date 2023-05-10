@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
@@ -11,6 +12,7 @@ interface BottomNavProps {
 
 export const BottomNav = ({ setIsSidebarOpen }: BottomNavProps) => {
   const { colorMode, setColorMode } = useColorModeContext();
+  const router = useRouter();
 
   return (
     <div className="flex fixed bottom-0 left-0 right-0 w-full px-5 py-5 bg-white dark:bg-black z-10 shadow-2xl shadow-slate-700 lg:hidden">
@@ -23,7 +25,12 @@ export const BottomNav = ({ setIsSidebarOpen }: BottomNavProps) => {
           color={colorMode === "dark" ? "white" : "black"}
         />
       </div>
-      <div className="flex-1 flex justify-center">
+      <div
+        className="flex-1 flex justify-center"
+        onClick={() => {
+          router.push("/");
+        }}
+      >
         <AiOutlineHome
           size={40}
           color={colorMode === "dark" ? "white" : "black"}
