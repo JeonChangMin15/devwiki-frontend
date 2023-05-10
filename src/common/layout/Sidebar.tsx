@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -8,12 +9,36 @@ interface SidebarProps {
 }
 
 const SIDEBAR_MENU = [
-  { main: "프론트엔드", side: ["html/css", "react", "Js/Ts"] },
-  { main: "백엔드", side: ["node", "spring", "python"] },
-  { main: "CS", side: ["데이터베이스", "네트워크"] },
+  {
+    main: { name: "프론트엔드", category: "frontend" },
+    side: [
+      { name: "All", category: "all" },
+      { name: "Html/Css", category: "html/css" },
+      { name: "React", category: "react" },
+      { name: "Js/Ts", category: "js/ts" },
+    ],
+  },
+  {
+    main: { name: "백엔드", category: "backend" },
+    side: [
+      { name: "All", category: "all" },
+      { name: "Node Js", category: "nodejs" },
+      { name: "Spring", category: "spring" },
+      { name: "Python", category: "python" },
+    ],
+  },
+  {
+    main: { name: "Computer Science", category: "cs" },
+    side: [
+      { name: "All", category: "all" },
+      { name: "데이터베이스", category: "database" },
+      { name: "네트워크", category: "network" },
+    ],
+  },
 ];
 
 export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState(SIDEBAR_MENU.map(() => false));
 
   const handleMenuClick = (index: number) => {
@@ -46,9 +71,23 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
         </div>
         <div>
           <div className="px-6 py-2 border-b border-slate-200">
-            <div className="text-lg">ALL</div>
+            <div
+              className="text-lg cursor-pointer hover:text-emerald-400"
+              onClick={() => {
+                router.push({
+                  pathname: "/lectures",
+                  query: {
+                    main: "all",
+                    sub: "all",
+                  },
+                });
+                setIsSidebarOpen(false);
+              }}
+            >
+              ALL
+            </div>
           </div>
-          {SIDEBAR_MENU.map((side, index) => {
+          {SIDEBAR_MENU.map((menu, index) => {
             return (
               <div
                 key={index}
@@ -58,13 +97,28 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
                   className="flex items-center justify-between text-lg cursor-pointer"
                   onClick={() => handleMenuClick(index)}
                 >
-                  <span>{side.main}</span>
+                  <div className="hover:text-emerald-400">{menu.main.name}</div>
                   <BsChevronDown />
                 </div>
                 {openMenu[index] && (
                   <div className="px-4 space-y-2">
-                    {side.side.map((category) => (
-                      <div key={category}>{category}</div>
+                    {menu.side.map((sub) => (
+                      <div
+                        className="cursor-pointer hover:text-emerald-400"
+                        key={sub.name + menu.main.name}
+                        onClick={() => {
+                          router.push({
+                            pathname: "/lectures",
+                            query: {
+                              main: menu.main.category,
+                              sub: sub.category,
+                            },
+                          });
+                          setIsSidebarOpen(false);
+                        }}
+                      >
+                        {sub.name}
+                      </div>
                     ))}
                   </div>
                 )}

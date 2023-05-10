@@ -47,3 +47,15 @@ export const GET_LECTURE_INFO = gql`
     }
   }
 `;
+
+export const GET_LECTURES_LIST = gql`
+  query fetchLectures($main: String!, $sub: String!) {
+    fetchLectures(main: $main, sub: $sub) {
+      id
+      title
+      writer
+      price
+      averageRating
+    }
+  }
+`;

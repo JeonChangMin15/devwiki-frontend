@@ -31,10 +31,19 @@ export type TopThreeLecture = Omit<
   "price" | "duration" | "url" | "comments" | "tags" | "description"
 >;
 
+export type List = Pick<
+  LectureData,
+  "id" | "writer" | "title" | "price" | "averageRating"
+>;
+
 export interface TopThreeLecturesType {
   fetchTopThreeLectures: TopThreeLecture[];
 }
 
 export interface DetailLecture {
   fetchLecture: LectureData;
+}
+
+export interface Lists {
+  fetchLectures: List[];
 }
