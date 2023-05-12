@@ -15,9 +15,10 @@ const Lecture = () => {
     variables: {
       main,
       sub,
+      page: 1,
     },
   });
-
+  console.log("data:", data);
   return (
     <div>
       <Category main={main} mainCategory={mainCategory} />

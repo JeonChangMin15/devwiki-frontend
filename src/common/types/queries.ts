@@ -45,5 +45,8 @@ export interface DetailLecture {
 }
 
 export interface Lists {
-  fetchLectures: List[];
+  fetchLectures: {
+    count: number;
+    lists: List[];
+  };
 }
