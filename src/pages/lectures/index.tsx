@@ -5,7 +5,7 @@ import { useQuery } from "@apollo/client";
 import { GET_LECTURES_LIST } from "@/common/graphql/queries";
 import { Lists } from "@/common/types/queries";
 import { Category } from "@/common/components/lectures/Category";
-import { List } from "@/common/components/lectures/List";
+import { Classes } from "@/common/components/lectures/Classes";
 
 const Lecture = () => {
   const router = useRouter();
@@ -21,7 +21,7 @@ const Lecture = () => {
   return (
     <div>
       <Category main={main} mainCategory={mainCategory} />
-      <List data={data} />
+      <Classes data={data} />
     </div>
   );
 };

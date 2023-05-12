@@ -8,7 +8,7 @@ interface ListProps {
   data?: Lists;
 }
 
-export const List = ({ data }: ListProps) => {
+export const Classes = ({ data }: ListProps) => {
   const router = useRouter();
 
   return (
@@ -17,7 +17,7 @@ export const List = ({ data }: ListProps) => {
         ({ id, writer, price, title, averageRating }, index) => {
           return (
             <div
-              className="mb-6 lg:mb-20 shadow-sm lg:shadow-none lg:hover:shadow hover:cursor-pointer max-h-[200px] lg:max-h-[250px]"
+              className="mb-6 lg:mb-10 shadow-sm lg:shadow-none lg:hover:shadow hover:cursor-pointer max-h-[200px] lg:max-h-[250px]"
               onClick={() => {
                 router.push({
                   pathname: "/detail",
