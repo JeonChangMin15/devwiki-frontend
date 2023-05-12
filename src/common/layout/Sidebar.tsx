@@ -79,6 +79,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
                   query: {
                     main: "all",
                     sub: "all",
+                    mainCategory: "전체강의",
                   },
                 });
                 setIsSidebarOpen(false);
@@ -112,6 +113,7 @@ export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
                             query: {
                               main: menu.main.category,
                               sub: sub.category,
+                              mainCategory: menu.main.name,
                             },
                           });
                           setIsSidebarOpen(false);
