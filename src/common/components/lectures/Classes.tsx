@@ -12,7 +12,7 @@ export const Classes = ({ data }: ListProps) => {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-2 gap-x-4 lg:grid-cols-4 pb-5 lg:pb-20 min-h-[550px] lg:min-h-[700px]">
+    <div className="grid grid-cols-2 gap-x-4 lg:grid-cols-4 pb-5 lg:pb-20">
       {data?.fetchLectures.lists.map(
         ({ id, writer, price, title, averageRating }, index) => {
           return (

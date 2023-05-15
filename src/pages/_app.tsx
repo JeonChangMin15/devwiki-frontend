@@ -8,6 +8,7 @@ import type { AppProps } from "next/app";
 
 import "@/common/styles/globals.css";
 import "@/common/styles/sidebar.css";
+import "@/common/styles/pagenation.css";
 import Layout from "@/common/layout/Layout";
 import { ColorModeProvider } from "@/common/context/ColorModeProvider";
 
