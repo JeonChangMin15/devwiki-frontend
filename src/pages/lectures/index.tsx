@@ -5,11 +5,15 @@ import { useQuery } from "@apollo/client";
 
 import { GET_LECTURES_LIST } from "@/common/graphql/queries";
 import { Lists } from "@/common/types/queries";
+import { Cost } from "@/common/types/state";
 import { Category } from "@/common/components/lectures/Category";
 import { Classes } from "@/common/components/lectures/Classes";
+import { CostOption } from "@/common/components/lectures/CostOption";
 
 const Lecture = () => {
   const [page, setPage] = useState(1);
+  const [cost, setCost] = useState<Cost>("all");
+
   const router = useRouter();
   const { main, sub, mainCategory } = router.query;
 
@@ -18,6 +22,7 @@ const Lecture = () => {
       main,
       sub,
       page,
+      cost,
     },
   });
   const pageCount = Math.ceil((data?.fetchLectures.count ?? 0) / 8);
@@ -26,13 +31,19 @@ const Lecture = () => {
     setPage(event.selected + 1);
   };
 
-  // console.log("data:", data);
   useEffect(() => {
     setPage(1);
+    setCost("all");
   }, [main, sub]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [cost]);
+
   return (
     <div>
       <Category main={main} mainCategory={mainCategory} />
+      <CostOption cost={cost} setCost={setCost} />
       <Classes data={data} />
       <div className="flex justify-center min-h-[300px] lg:min-h-[400px]">
         <ReactPaginate

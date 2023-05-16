@@ -39,10 +39,12 @@ export const Classes = ({ data }: ListProps) => {
                   <span className="text-sm">{averageRating}</span>
                 </div>
                 <div className="font-medium text-blue-700 text-lg">
-                  {price.toLocaleString("ko-KR", {
-                    style: "currency",
-                    currency: "KRW",
-                  })}
+                  {price === 0
+                    ? "무료"
+                    : price.toLocaleString("ko-KR", {
+                        style: "currency",
+                        currency: "KRW",
+                      })}
                 </div>
               </div>
             </div>
