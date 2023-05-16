@@ -49,7 +49,7 @@ const Lecture = () => {
       )}
       <CostOption cost={cost} setCost={setCost} />
       <Classes data={data} />
-      <div className="flex justify-center min-h-[300px] lg:min-h-[400px]">
+      <div className="flex justify-center min-h-[200px] lg:min-h-[400px]">
         <ReactPaginate
           breakLabel="..."
           nextLabel=">"

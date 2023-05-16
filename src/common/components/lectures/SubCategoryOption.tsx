@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 import { MainCategory } from "@/common/types/queries";
@@ -21,6 +21,8 @@ export const SubCategoryOption = ({
   mainCategory,
 }: SubCategoryOptionProps) => {
   const router = useRouter();
+  const [currentSubOption, setCurrentSubOption] = useState("");
+
   const mainOption = main as MainCategory;
 
   return (
@@ -39,11 +41,12 @@ export const SubCategoryOption = ({
                 router.push({
                   pathname: "/lectures",
                   query: {
-                    sub: val,
+                    sub: currentSubOption === val ? "all" : val,
                     main,
                     mainCategory,
                   },
                 });
+                setCurrentSubOption((prev) => (prev === val ? "all" : val));
               }}
             >
               {val}
