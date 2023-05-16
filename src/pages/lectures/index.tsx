@@ -9,6 +9,7 @@ import { Cost } from "@/common/types/state";
 import { Category } from "@/common/components/lectures/Category";
 import { Classes } from "@/common/components/lectures/Classes";
 import { CostOption } from "@/common/components/lectures/CostOption";
+import { SubCategoryOption } from "@/common/components/lectures/SubCategoryOption";
 
 const Lecture = () => {
   const [page, setPage] = useState(1);
@@ -43,6 +44,9 @@ const Lecture = () => {
   return (
     <div>
       <Category main={main} mainCategory={mainCategory} />
+      {main !== "all" && (
+        <SubCategoryOption main={main} sub={sub} mainCategory={mainCategory} />
+      )}
       <CostOption cost={cost} setCost={setCost} />
       <Classes data={data} />
       <div className="flex justify-center min-h-[300px] lg:min-h-[400px]">

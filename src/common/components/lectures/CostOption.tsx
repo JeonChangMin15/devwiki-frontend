@@ -11,7 +11,7 @@ export const CostOption = ({ cost, setCost }: CostOptionProps) => {
     <div className="flex pb-5 space-x-3">
       <div
         onClick={() => setCost("all")}
-        className={`flex items-center py-2 px-4 border-2 rounded text-sm ${
+        className={`flex items-center py-2 px-4 border-2 rounded text-sm hover:bg-slate-200/30 cursor-pointer ${
           cost === "all"
             ? "bg-emerald-200/30 text-emerald-500 font-medium border-none"
             : "bg-white text-black"
@@ -21,7 +21,7 @@ export const CostOption = ({ cost, setCost }: CostOptionProps) => {
       </div>
       <div
         onClick={() => setCost("pay")}
-        className={`flex items-center py-2 px-4 border-2 rounded text-sm ${
+        className={`flex items-center py-2 px-4 border-2 rounded text-sm hover:bg-slate-200/30 cursor-pointer ${
           cost === "pay"
             ? "bg-emerald-200/30 text-emerald-500 font-medium border-none"
             : "bg-white text-black"
@@ -31,7 +31,7 @@ export const CostOption = ({ cost, setCost }: CostOptionProps) => {
       </div>
       <div
         onClick={() => setCost("free")}
-        className={`flex items-center py-2 px-4 border-2 rounded text-sm ${
+        className={`flex items-center py-2 px-4 border-2 rounded text-sm hover:bg-slate-200/30 cursor-pointer ${
           cost === "free"
             ? "bg-emerald-200/30 text-emerald-500 font-medium border-none"
             : "bg-white text-black"
