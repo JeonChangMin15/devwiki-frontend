@@ -33,16 +33,19 @@ DevWiki API
 ## 결과물
 
 ### 메인화면
-![메인데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/5d5886f0-9bcb-482c-9dbd-63dda6546a18)
-![스크린샷 2023-08-17 오후 12 31 49](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/50822349-eeb7-485d-ad88-2316e5a2024d)
+
+![메인데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/e2fabd26-0e2a-4458-bccb-224925a1f9a7)
+![메인 모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/ffdfc52e-e20c-4fcc-bc34-f5a5cff6f433)
 
 
 ### 강의목록화면
-![분야별데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/b86b0c95-961e-486c-b441-874674ba67d4)
-![스크린샷 2023-08-17 오후 12 32 23](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/71c4b3e5-fe9f-45f0-8215-926d51224bbe)
 
+![분야별데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/738a1e3d-2a6c-4cbb-b5d4-5096ea350fe1)
+![목로 모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/9c92e18f-21ee-4e65-8ebb-72d28e69e3d0)
 
 
 ### 강의 상세정보 및 평가 화면
-![스크린샷 2023-08-17 오후 12 26 52](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/62ece71c-8bcd-45dd-b7c1-2c44ee88a812)
-![스크린샷 2023-08-17 오후 12 27 16](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/a62153e6-2c42-46eb-b194-38f90f23f6c3)
+
+![상세 데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/7601e844-11cb-4d9f-b499-24bddaeb6c51)
+![상세모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/8e091cd5-1008-4a11-b4bd-2c8740547ba5)
+
