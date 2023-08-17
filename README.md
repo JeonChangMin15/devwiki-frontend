@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 DevWiki | 데브위키
 
-## Getting Started
+인터넷 강의 정보 및 평가 사이트
 
-First, run the development server:
+## 👫 팀원
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Front-end : 전창민
+- Back-end : 전창민
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 개발 기간
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- 기간: 2023.04 ~ 2023.05 (한달)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 적용 기술
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Front-end: Next.js, TypeScript,  Graphql, Apollo-Client, TailwindCss
+- Back-end: Nest.js, TypeScript, Graphql, Apollo-Server, TypeOrm
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 개발방향
 
-## Learn More
+DevWiki UI/UX
 
-To learn more about Next.js, take a look at the following resources:
+1. 데스크탑 및 모바일화면에 맞는 반응형 화면을 제공합니다.
+2. 각 분야별로 Top3 강의를 제공합니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+DevWiki API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. 유저가 원하는 강의 목록을 제공합니다
+2. 유저가 원하는 강의 상세 내용 및 평가를 제공합니다
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 결과물
+
+### 메인화면
+![메인데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/5d5886f0-9bcb-482c-9dbd-63dda6546a18)
+![메인모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/dd49f6c1-dd78-4cbb-b790-a6998c2c473a)
+
+### 강의목록화면
+![분야별데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/b86b0c95-961e-486c-b441-874674ba67d4)
+![분야별모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/f57a804d-827e-487a-bd60-06fe4aa30c45)
+
+### 강의 상세정보 및 평가 화면
+![스크린샷 2023-08-17 오후 12 26 52](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/62ece71c-8bcd-45dd-b7c1-2c44ee88a812)
+![스크린샷 2023-08-17 오후 12 27 16](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/a62153e6-2c42-46eb-b194-38f90f23f6c3)
