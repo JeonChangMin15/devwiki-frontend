@@ -47,5 +47,4 @@ DevWiki API
 ### 강의 상세정보 및 평가 화면
 
 ![상세 데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/7601e844-11cb-4d9f-b499-24bddaeb6c51)
-![상세모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/8e091cd5-1008-4a11-b4bd-2c8740547ba5)
-
+![상세모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/1cb9ddf6-ba7b-42c9-b5a7-78a1d0816ec4)
