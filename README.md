@@ -34,11 +34,14 @@ DevWiki API
 
 ### 메인화면
 ![메인데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/5d5886f0-9bcb-482c-9dbd-63dda6546a18)
-![메인모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/dd49f6c1-dd78-4cbb-b790-a6998c2c473a)
+![스크린샷 2023-08-17 오후 12 31 49](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/50822349-eeb7-485d-ad88-2316e5a2024d)
+
 
 ### 강의목록화면
 ![분야별데스크탑](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/b86b0c95-961e-486c-b441-874674ba67d4)
-![분야별모바일](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/f57a804d-827e-487a-bd60-06fe4aa30c45)
+![스크린샷 2023-08-17 오후 12 32 23](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/71c4b3e5-fe9f-45f0-8215-926d51224bbe)
+
+
 
 ### 강의 상세정보 및 평가 화면
 ![스크린샷 2023-08-17 오후 12 26 52](https://github.com/JeonChangMin15/devwiki-frontend/assets/89255072/62ece71c-8bcd-45dd-b7c1-2c44ee88a812)
